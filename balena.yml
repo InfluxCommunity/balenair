@@ -18,16 +18,26 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/InfluxCommunity/balenair/tree/2.X'
+      url: 'https://github.com/InfluxCommunity/balenair'
   logo:
     type: blob.asset
     data:
       url: >-
-        https://github.com/InfluxCommunity/balenair/tree/2.X/logo.png
+         https://raw.githubusercontent.com/InfluxCommunity/balenair/master/logo.png
 data:
+  applicationEnvironmentVariables:
+    - INFLUXDB_CLOUD_BUCKET_ID: <INSERT IF REQ>
+    - INFLUXDB_CLOUD_HOST: <INSERT IF REQ>
+    - INFLUXDB_CLOUD_ORG_ID: <INSERT IF REQ>
+    - INFLUXDB_CLOUD_TOKEN: <INSERT IF REQ>
+    - REPLICATION: <DELETE IF NOT USING REPLICATION>
+    - INFLUXDB_DB: edge
+    - INFLUXDB_ORG: influxdb
+    - INFLUX_TOKEN: edge
+
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
     - raspberrypi4-64
     - raspberrypi3-64
     
-version: 2.0
+version: 2.0.0

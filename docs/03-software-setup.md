@@ -25,7 +25,7 @@ Next click on the "get started" button and choose your model of Raspberry Pi fro
 ## One-click deploy option
 This option allows you to deploy and configure the IAQ with the single click of a button. It will create a new private fleet in your balenaCloud account. If you don't already have a free balenaCloud account, it will prompt you to create one. Use the button below to get started:
 
-[![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/InfluxCommunity/balenair/tree/2.X)
+[![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/InfluxCommunity/balenair&defaultDeviceType=raspberrypi4-64&configUrl=https://raw.githubusercontent.com/InfluxCommunity/balenair/master/balena.yml)
 
 ![sdcard](./images/sdcard.gif)
 
@@ -33,6 +33,7 @@ This option allows you to deploy and configure the IAQ with the single click of 
 Before adding a device to your fleet, you'll need to configure the fleet. Click on the "Fleet Configuration" tab and add the following environment variables:
 
 *IF YOU DO NOT WISH TO USE THE INFLUXDB REPLICATION FEATURE DO NOT SET THE REPLICATION ENVIRONMENT VARIABLE*
+
 As this will lead to issues within the InfluxDB setup script. You may also leave out the following:
 * INFLUXDB_CLOUD_BUCKET_ID
 * INFLUXDB_CLOUD_HOST
@@ -43,10 +44,6 @@ As this will lead to issues within the InfluxDB setup script. You may also leave
 REPLICATION
 true
 All services
-
-INFLUX_TOKEN	
-edge
-All services	
 
 INFLUXDB_CLOUD_BUCKET_ID	
 <INSERT OWN CLOUD BUCKET ID>
@@ -63,15 +60,6 @@ All services
 INFLUXDB_CLOUD_TOKEN	
 <INSERT OWN CLOUD TOKEN>
 All services	
-
-INFLUXDB_DB	
-edge
-All services	
-
-
-INFLUXDB_ORG	
-influxdb
-All services
 ```
 
 
