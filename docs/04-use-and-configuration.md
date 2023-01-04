@@ -66,6 +66,9 @@ To modify the IAQ dashboard or add your own, you can log into Grafana with the a
 
 See the [Grafana documentation](https://grafana.com/docs/grafana/next/panels/working-with-panels/) for more information about modifying/designing dashboards.
 
+## InfluxDB Edge to Cloud Replication
+The IAQ service uses [InfluxDB OSS](https://www.influxdata.com/products/influxdb/) to store the sensor data locally on the device. It is designed to be used in conjunction with the [InfluxDB Cloud](https://www.influxdata.com/products/influxdb-cloud/) service. InfluxDB OSS runs a task which downsamples the data and adds a new ''location'' tag before the replication process begins. It is recommended to update the location depending on device location. The default location is "UK".
+
 ## Other configuration options
 
 ### Logging

@@ -23,4 +23,5 @@ datasources:
   # Custom http headers. Required by InfluxDB V2 for authentication
   jsonData:
     httpHeaderName1: 'Authorization'
+  secureJsonData:
     httpHeaderValue1: 'Token edge'
