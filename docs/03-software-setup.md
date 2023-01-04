@@ -31,7 +31,14 @@ This option allows you to deploy and configure the IAQ with the single click of 
 
 ### Fleet Configuration
 Before adding a device to your fleet, you'll need to configure the fleet. Click on the "Fleet Configuration" tab and add the following environment variables:
+
 *IF YOU DO NOT WISH TO USE THE INFLUXDB REPLICATION FEATURE DO NOT SET THE REPLICATION ENVIRONMENT VARIABLE*
+As this will lead to issues within the InfluxDB setup script. You may also leave out the following:
+* INFLUXDB_CLOUD_BUCKET_ID
+* INFLUXDB_CLOUD_HOST
+* INFLUXDB_CLOUD_ORG_ID
+* INFLUXDB_CLOUD_HOST*
+
 ```
 REPLICATION
 true
@@ -76,50 +83,6 @@ Once your application has been created you'll need to add a device to it:
 
 The IAQ application will start downloading as soon as your device appears in the dashboard.
 
-## Configuration
-
-```
-INFLUX_TOKEN	
-not defined
-edge
-All services	
-
-
-INFLUXDB_CLOUD_BUCKET_ID	
-not defined
-<INSERT OWN CLOUD BUCKET ID>
-All services	
-
-
-INFLUXDB_CLOUD_HOST	
-not defined
-<INSERT OWN CLOUD HOST ID>
-All services	
-
-
-INFLUXDB_CLOUD_ORG_ID	
-not defined
-<INSERT OWN CLOUD ORG ID>
-influxdb2	
-
-
-INFLUXDB_CLOUD_TOKEN	
-not defined
-<INSERT OWN CLOUD TOKEN>
-influxdb2	
-
-
-INFLUXDB_DB	
-not defined
-edge
-All services	
-
-
-INFLUXDB_ORG	
-not defined
-influxdb
-All services
-```
 
 ## Balena CLI option
 
