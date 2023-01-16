@@ -38,7 +38,7 @@ As this will lead to issues within the InfluxDB setup script. You may also leave
 * INFLUXDB_CLOUD_BUCKET_ID
 * INFLUXDB_CLOUD_HOST
 * INFLUXDB_CLOUD_ORG_ID
-* INFLUXDB_CLOUD_HOST*
+* INFLUXDB_CLOUD_TOKEN
 
 ```
 REPLICATION

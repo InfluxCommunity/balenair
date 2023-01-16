@@ -13,7 +13,7 @@ EXISTING_STACK_ID=$(influx stacks init --hide-headers --stack-name edge-replicat
 fi
 
 echo "Found stack: $EXISTING_STACK_ID"
-influx apply --force yes --file /docker-entrypoint-initdb.d/edge-replication.yml --stack-id $EXISTING_STACK_ID
+influx apply --force yes --file /docker-entrypoint-initdb.d/edge-replication.yml --stack-id $EXISTING_STACK_ID --secret=location=${LOCATION:=default}
 
 # setup EDR to Cloud
 

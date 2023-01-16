@@ -32,11 +32,12 @@ spec:
     offset: 5s
     query: |-
         import "influxdata/influxdb/tasks"
+        import "influxdata/influxdb/secrets"
         import "types"
 
 
 
-        location = "UK"
+        location = secrets.get(key: "location")
         data = () =>
             from(bucket: "edge")
                 |> range(start: tasks.lastSuccess(orTime: -task.every))
