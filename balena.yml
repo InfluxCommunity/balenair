@@ -34,10 +34,11 @@ data:
     - INFLUXDB_DB: edge
     - INFLUXDB_ORG: influxdb
     - INFLUX_TOKEN: edge
+    - LOCATION: default
 
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
     - raspberrypi4-64
     - raspberrypi3-64
     
-version: 2.0.0
+version: 2.0.1
